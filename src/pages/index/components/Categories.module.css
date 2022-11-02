@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--cardWith), 1fr));
+  gap: var(--listGap);
+  margin: 0 12px ;
+}
+
+.listItem {
+  border-radius: 12px;
+  background-color: #181818;
+  border: 3px solid transparent;
+  transition : border 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.listItem:hover {
+  cursor: pointer;
+  border: 3px solid #474BFE;
+  color: #474BFE;
+}

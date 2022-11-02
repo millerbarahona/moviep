@@ -1,0 +1,44 @@
+:root {
+  --cardWith: 200px;
+  --listGap: 8px;
+  --maxWidth: 100%
+}
+
+#root {
+  width: 100%;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.App {
+  width: 100%
+}
+
+.Main {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+
+@media (width > 1200px) {
+  :root {
+    --maxWidth: 80vw
+  }
+}
+
+@media (width < 400px) {
+  :root {
+    --cardWith: 150px;
+  }
+}
+
+@media (width < 330px) {
+  :root {
+    --cardWith: 120px;
+  }
+}
+
+@media (max-width < 500px) {
+  :root {
+    --cardWith: 180px;
+  }
+}
