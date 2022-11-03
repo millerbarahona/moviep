@@ -20,9 +20,9 @@ function Movies() {
 
   return (
     <div>
-      <div>
+      <div className={styles.container}>
         <div>
-        <h1 className={styles.title}> <BackButton  route='/'/> &nbsp; &nbsp;Movies of {category?.name}</h1>
+        <h2 className={styles.title}> <BackButton  route='/'/> &nbsp; &nbsp;Movies of {category?.name}</h2>
         </div>
         <MovieList movies={moviesState.movieRes.movies!}/>
         {

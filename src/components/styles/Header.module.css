@@ -3,15 +3,18 @@
   flex-direction: row;
   justify-content: space-evenly;
   border-bottom: 3px solid #351283;
+  background-color: #351283;
+  /* margin-bottom: 20px; */
 }
 
 .container h4 {
   padding: 5px 15px;
   border-radius: 12px;
   background-color: #351283;
+  transition: text-decoration .300s linear;
 }
 
 .container h4:hover {
   cursor: pointer;
-  margin-right: 10px;
+  text-decoration: underline;
 }

@@ -20,7 +20,7 @@ function Index() {
 
   return (
     <div>
-      <h1>Select a Category</h1>
+      <h2>Select a Category</h2>
       <main className={styles.container}>
         <div className={styles.genreContainer}>
         {
