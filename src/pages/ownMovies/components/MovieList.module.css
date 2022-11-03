@@ -1,0 +1,45 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--cardWith), 1fr));
+  gap: var(--listGap);
+  margin: 0 12px;
+
+}
+
+.itemList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: #351283;
+  padding: 15px 15px;
+  border: 1px solid transparent;
+  transition : border 200ms ease-in-out, color 200ms ease-in-out;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+}
+
+.itemList:hover {
+  cursor: pointer;
+  border: 1px solid #474BFE;
+  color: #474BFE;
+}
+
+.itemList img{
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.itemList p {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 20px;
+  margin: 10px 0 10px 0;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+}
+
+.itemList svg {
+  position: absolute;
+  right: 10px;
+}

@@ -1,15 +1,17 @@
 .container {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  padding: 5px 20px;
+  justify-content: space-evenly;
+  border-bottom: 3px solid #351283;
 }
 
-.container h2 {
-  margin-right: 10px;
+.container h4 {
+  padding: 5px 15px;
+  border-radius: 12px;
+  background-color: #351283;
 }
 
-.container h2:hover {
+.container h4:hover {
   cursor: pointer;
   margin-right: 10px;
 }

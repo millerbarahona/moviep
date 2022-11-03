@@ -37,8 +37,8 @@
   }
 }
 
-@media (max-width < 500px) {
+@media (width < 500px) {
   :root {
-    --cardWith: 180px;
+    --cardWith: 150px;
   }
 }

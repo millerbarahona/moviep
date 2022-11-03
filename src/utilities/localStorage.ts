@@ -1,4 +1,4 @@
-import { Category, Movie } from "../models"
+import { Category, Movie, OwnMovie } from "../models"
 
 export function saveMoviesLocal () {
 
@@ -35,4 +35,18 @@ export function removeFav (oldFav: Movie) {
   const local = getLocalFavs()
 
   local ? localStorage.setItem('favs',JSON.stringify(local.filter(fav => fav.id !== oldFav.id)) ) : null
+}
+
+export function getOwnMovies () {
+  const local = localStorage.getItem('ownMovies')
+  let localOwns: OwnMovie[] | undefined 
+  local ? localOwns = JSON.parse(local) : null
+  return localOwns
+
+}
+
+export function addOwnMovie(ownMovie: OwnMovie) {
+  let toSave: OwnMovie[] = []
+  getOwnMovies() ? toSave = [...getOwnMovies()!, ownMovie] : toSave = [ownMovie]
+  localStorage.setItem('ownMovies', JSON.stringify(toSave))
 }

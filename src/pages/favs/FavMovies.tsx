@@ -12,6 +12,7 @@ function FavMovies() {
   
   return (
     <div>
+      <h1>Favorite Movies</h1>
       <MovieList movies={movies}/>
     </div>
   )
