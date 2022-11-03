@@ -37,7 +37,7 @@ function AddMovie() {
           <input required type="text" placeholder='Name' />
           <label htmlFor="">Description</label>
           <input required type="text" placeholder='Description' />
-          <label htmlFor="file" className={styles.fileLabel}>Image</label>
+          <label htmlFor="file" className={styles.fileLabel}>Upload Image</label>
           <input required type="file" id='file' className={styles.file} />
           <label htmlFor="date">Date</label>
           <input required type="date" id="date" />
