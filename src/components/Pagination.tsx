@@ -6,9 +6,8 @@ import styles from './styles/Pagination.module.css'
 function Pagination() {
   const moviesState = moviesStore()
   const { idCategory } = useParams()
-  const [params] = useSearchParams()
   const navigate = useNavigate()
-  const page = params.get('page')
+  
 
   const handleCLick = (page: number) => {
     getMoviesbyCategory(+idCategory!,  page).then(moviesState.addMovies)

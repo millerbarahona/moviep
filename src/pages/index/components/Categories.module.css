@@ -1,29 +1,36 @@
 .container {
   display: flex;
   flex-direction: row;
-  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: scroll;
   /* display: grid; */
   /* grid-template-columns: repeat(auto-fit, minmax(var(--cardWith), 1fr)); */
   /* gap: var(--listGap); */
-  margin: 12px ;
+  margin: 12px;
+}
+
+.container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
 .listItem {
   white-space: nowrap;
   border-radius: 12px;
-  background-color: #181818;
+  background-color: #351283;
   width: fit-content;
   margin-right: 8px;
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   transition : border 200ms ease-in-out, color 200ms ease-in-out;
 }
 
-.listItem h2{
+.listItem h4{
   margin: 5px 12px;
+  font-weight: 500;
 }
 
 .listItem:hover {
   cursor: pointer;
-  border: 3px solid #474BFE;
+  border: 1px solid #474BFE;
   color: #474BFE;
 }

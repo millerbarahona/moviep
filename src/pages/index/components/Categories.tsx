@@ -15,7 +15,7 @@ function Categories() {
         {
           categoriesState.categories!.map((category) => (
             <div key={category.id} className={styles.listItem} onClick={() => handleClick(category.id)}>
-              <h2>{category.name}</h2>
+              <h4>{category.name}</h4>
             </div>
           ))
         }

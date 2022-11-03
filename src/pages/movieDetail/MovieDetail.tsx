@@ -15,7 +15,7 @@ function MovieDetail() {
   return (
     <div>
       <h1>{movie?.title}</h1>
-      <img src={`${import.meta.env.VITE_IMGS_BASE_URL}${movie?.poster_path}`} alt="" />
+      <img src={`${import.meta.env.VITE_IMGS_BASE_URL}${movie?.poster_path}`} height='400px' />
     </div>
   )
 }

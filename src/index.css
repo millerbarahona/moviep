@@ -6,7 +6,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background: linear-gradient(37deg, rgba(56,180,185,1) 0%, rgba(117,62,239,1) 35%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,6 +28,7 @@ body {
   margin: 0;
   display: flex;
   min-width: 320px;
+  height:100vh;
 }
 
 
