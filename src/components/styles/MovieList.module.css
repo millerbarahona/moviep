@@ -7,6 +7,7 @@
 }
 
 .itemList {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 12px;
@@ -36,4 +37,9 @@
   margin: 10px 0 10px 0;
   -webkit-line-clamp: 1;
   text-overflow: ellipsis;
+}
+
+.itemList svg {
+  position: absolute;
+  right: 10px;
 }

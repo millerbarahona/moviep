@@ -10,7 +10,7 @@ export interface Movies {
 interface MoviesState {
   movieRes: Movies ,
   addMovies: (newMovies: MovieResponse) => void,
-  removeMovies: () => void
+  removeMovies: () => void,
 }
 
 export const moviesStore = create<MoviesState>((set) => ({
@@ -28,6 +28,6 @@ export const moviesStore = create<MoviesState>((set) => ({
     set((state)=>({
       movieRes: {}
     }))
-  },
+  }
 }))
 

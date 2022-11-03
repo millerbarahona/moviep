@@ -1,25 +1,18 @@
-import { useEffect, useState } from 'react'
 import './App.css'
-import { getCategories } from './utilities'
-import { Category } from './models'
 import { Router } from './router/router'
 import { Header } from './components'
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [categories, setCategories] = useState<Category[]>()
-
-  useEffect(() => {
-    getCategories().then((categories) => setCategories(categories))
-  }, [])
 
   return (
     <div className="App">
+      <BrowserRouter>
       <Header />
       <div className="Main">
         <Router />
       </div>
-      
+      </BrowserRouter>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useSearchParams } from "react-router-dom"
 import { MovieList, Pagination } from "../../components"
 import { Category } from "../../models"
 import { moviesStore } from "../../state"
@@ -10,10 +10,12 @@ function Movies() {
   const { idCategory } = useParams()
   const moviesState = moviesStore()
   const [category, setCategory] = useState<Category>()
+  const [params] = useSearchParams()
+  const page = params.get('page')
 
   useEffect(() => {
     getCategory(+idCategory!).then(setCategory)
-    getMoviesbyCategory(+idCategory!, 4).then(moviesState.addMovies)
+    getMoviesbyCategory(+idCategory!, page ? +page! : 1).then(moviesState.addMovies)
   }, [])
 
   return (
@@ -22,7 +24,10 @@ function Movies() {
         <div>
           <h1 className={styles.title}>Movies of {category?.name}</h1>
         </div>
-        <MovieList />
+        <MovieList movies={moviesState.movieRes.movies!}/>
+        {
+          moviesState.movieRes.movies?.length! === undefined ? <div>No hay resultados</div> : null
+        }
         <Pagination />
       </div>
     </div>

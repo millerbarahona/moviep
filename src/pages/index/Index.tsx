@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import Spinner from "../../components/Spinner"
-import { Category } from "../../models"
 import { categoriesStore, moviesStore } from "../../state"
 import { getCategories } from "../../utilities"
 import Categories from "./components/Categories"
@@ -18,10 +17,10 @@ function Index() {
 
   return (
     <div>
-
+      <h1>Select a Category</h1>
       <main className={styles.container}>
         {
-          categoriesState.categories.length !== 0 ? <Categories /> : <Spinner />
+          categoriesState.categories?.length !== 0 ? <Categories /> : <Spinner />
         }
       </main>
     </div>

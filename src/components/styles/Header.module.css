@@ -4,3 +4,12 @@
   width: 100%;
   padding: 5px 20px;
 }
+
+.container h2 {
+  margin-right: 10px;
+}
+
+.container h2:hover {
+  cursor: pointer;
+  margin-right: 10px;
+}
