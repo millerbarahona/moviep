@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Movie } from '../models'
-import { moviesStore } from '../state'
+import { favsStore, moviesStore } from '../state'
 import { addFav, getLocalFavs, removeFav } from '../utilities'
 import styles from './styles/MovieList.module.css'
 
@@ -9,7 +9,6 @@ interface MovieListProps {
  movies: Movie[]
 }
 function MovieList({movies}: MovieListProps) {
-  const moviesState = moviesStore()
 
   return (
     <div>
@@ -30,6 +29,7 @@ interface MovieProps {
 
 function MovieItem({movie}: MovieProps) {
   const navigate = useNavigate()
+  const favState = favsStore()
 
   const checkInFavs = (movieId: number) => {
     const favs = getLocalFavs()
@@ -45,6 +45,7 @@ function MovieItem({movie}: MovieProps) {
     const isFavorite = favs?.filter(fav => fav.id === movie.id).length
     isFavorite ? removeFav(movie) : addFav(movie)
     setIsFav(!isFav)
+    !isFav ? favState.addMovie(movie) : favState.removeMovie(movie.id)
   }
 
   return (

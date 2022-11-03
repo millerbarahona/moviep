@@ -27,13 +27,13 @@
 
 @media (width < 400px) {
   :root {
-    --cardWith: 150px;
+    --cardWith: 120px;
   }
 }
 
 @media (width < 330px) {
   :root {
-    --cardWith: 120px;
+    --cardWith: 100px;
   }
 }
 

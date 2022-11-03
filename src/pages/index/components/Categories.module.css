@@ -1,15 +1,25 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--cardWith), 1fr));
-  gap: var(--listGap);
-  margin: 0 12px ;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(var(--cardWith), 1fr)); */
+  /* gap: var(--listGap); */
+  margin: 12px ;
 }
 
 .listItem {
+  white-space: nowrap;
   border-radius: 12px;
   background-color: #181818;
+  width: fit-content;
+  margin-right: 8px;
   border: 3px solid transparent;
   transition : border 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.listItem h2{
+  margin: 5px 12px;
 }
 
 .listItem:hover {

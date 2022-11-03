@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams, useSearchParams } from "react-router-dom"
-import { MovieList, Pagination } from "../../components"
+import { BackButton, MovieList, Pagination } from "../../components"
 import { Category } from "../../models"
 import { moviesStore } from "../../state"
 import { getCategory, getMoviesbyCategory } from "../../utilities"
@@ -22,7 +22,7 @@ function Movies() {
     <div>
       <div>
         <div>
-          <h1 className={styles.title}>Movies of {category?.name}</h1>
+        <h1 className={styles.title}> <BackButton  route='/'/> &nbsp; &nbsp;Movies of {category?.name}</h1>
         </div>
         <MovieList movies={moviesState.movieRes.movies!}/>
         {
